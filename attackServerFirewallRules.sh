@@ -10,13 +10,14 @@ else
       apt-get update
       apt-get install ufw -y;
   fi
-# Fix this
+
 # Adds a rule that allows the specified ssh_src_network_or_host to connect to the ssh port and enables ufw
-# ufw allow from $1 to any port 22 << EOF
+ufw allow from $1 to any port 22
+# Fix this, an attempt to respond to the y or n prompt
+#<< EOF
 # y
 #
 # EOF
-ufw allow from $1 to any port 22
 ufw enable
 ufw status
 
