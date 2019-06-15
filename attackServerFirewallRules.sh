@@ -16,6 +16,8 @@ else
 # y
 #
 # EOF
+ufw allow from $1 to any port 22
 ufw enable
 ufw status
+
 fi
