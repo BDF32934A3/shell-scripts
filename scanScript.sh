@@ -22,7 +22,7 @@ function run_port_scan() {
 
 function enum_open_ports() {
     echo "Starting enumeration of open ports please wait..."
-    nmap -A $targetIP -p$ports -oA Port_Scan_Results/$targetName\_$targetIP
+    nmap -Pn -A $targetIP -p$ports -oA Port_Scan_Results/$targetName\_$targetIP
     echo "Finished enumeration of open ports.  Results stored in the Port_Scan_Results folder"
 }
 
