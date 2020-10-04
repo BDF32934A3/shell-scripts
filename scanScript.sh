@@ -10,7 +10,7 @@ function display_usage() {
 
 function create_folders() { # TODO Add error handling
     mkdir $targetName\_$targetIP  
-    cd $targetName\_$targetIP && mkdir Port_Scan_Results Enummeration Exploits PrivEsc Loot Tools
+    cd $targetName\_$targetIP && mkdir Port_Scan_Results Enumeration Exploits PrivEsc Loot Tools
     echo "Created folders for organization"
 }
 
