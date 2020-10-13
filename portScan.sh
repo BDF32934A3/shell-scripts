@@ -2,7 +2,11 @@
 
 # Author: t3chn0t3s
 # Date: 10/04/2020
-# Description: Simple script that scans a single target according to my preferences and creates folders for organization
+# Description: Simple script that scans a single target and organizes output to my preferences
+
+# Global variables
+targetName=$1
+targetIP=$2
 
 function display_usage() {
     echo "usage: $0 <targetName> <targetIP>"
@@ -38,9 +42,9 @@ if [[ ( $# == "--help") ||  $# == "-h" ]]; then
 	exit 0
 fi 
 
-targetName=$1
-targetIP=$2
 
+
+# Function calls
 create_folders
 run_port_scan 
 enum_open_ports

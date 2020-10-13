@@ -2,8 +2,16 @@
 
 # Author: t3chn0t3s
 # Date: 10/12/2020
-# Description: Simple script to automate some regular web server/app enumeration tasks.  
+# Description: Simple script to automate some regular web server/app enumeration tasks and organize 
+# output to my preferences  
 
+# Global variables
+targetName=$1
+targetIP=$2
+targetPort=$3 
+targetProtocol=$4
+wordList=$5
+fileExt=$6 
 
 
 function display_usage() {
@@ -51,13 +59,7 @@ if [[ ( $# == "--help") ||  $# == "-h" ]]; then
 fi 
 
 
-targetName=$1
-targetIP=$2
-targetPort=$3 
-targetProtocol=$4
-wordList=$5
-fileExt=$6 
-
+# Function calls
 create_Folders
 take_Screenshot
 open_Browser
